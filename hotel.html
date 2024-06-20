@@ -3,12 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <title>Hotelzimmer-Buchungssystem</title>
-
 </head>
 <body>
 
 <h1>Hotelzimmer-Buchungssystem</h1>
 
+<form action="/submit-booking" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">E-Mail:</label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="checkin-date">Check-in Datum:</label>
+  <input type="date" id="checkin-date" name="checkin-date" required><br><br>
+
+  <label for="checkout-date">Check-out Datum:</label>
+  <input type="date" id="checkout-date" name="checkout-date" required><br><br>
+
+  <label for="room-type">Zimmerart:</label>
+  <select id="room-type" name="room-type" required>
+    <option value="single">Einzelzimmer</option>
+    <option value="double">Doppelzimmer</option>
+    <option value="suite">Suite</option>
+  </select><br><br>
+
+  <label for="extras">Zusätzliche Dienstleistungen (Mehrfachauswahl möglich):</label><br>
+  <select id="extras" name="extras[]" multiple>
+    <option value="breakfast">Frühstück</option>
+    <option value="parking">Parkplatz</option>
+    <option value="spa">Spa-Zugang</option>
+    <option value="gym">Fitnessstudio</option>
+  </select><br><br>
+
+  <label>Zusatzoptionen:</label><br>
+  <input type="checkbox" id="airport-shuttle" name="airport-shuttle">
+  <label for="airport-shuttle">Flughafentransfer</label><br>
+  <input type="checkbox" id="pet-friendly" name="pet-friendly">
+  <label for="pet-friendly">Haustierfreundlich</label><br>
+  <input type="checkbox" id="late-checkout" name="late-checkout">
+  <label for="late-checkout">Später Check-out</label><br><br>
+
+  <input type="submit" value="Buchen">
+</form>
 
 </body>
 </html>
+
